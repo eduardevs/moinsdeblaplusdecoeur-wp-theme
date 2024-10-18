@@ -25,11 +25,12 @@ if (has_custom_logo()) {
     <header class="bg-slate-900 p-4">
         <div class="container mx-auto">
             <h1 class="text-3xl font-bold">
-                <a href="<?php echo get_home_url(); ?>" class="text-white no-underline hover:underline">
-                    <?php if (has_custom_logo()): ?>
-                        <img src="<?php echo $custom_logo_url; ?>" alt="Logo" class="h-12">
-                    <?php else: ?>
-                        -bla+coeur
+
+                <?php if (has_custom_logo()): ?>
+                    <a href="<?php echo get_home_url(); ?>" class="text-white no-underline hover:underline">
+                        <img src="<?php echo $custom_logo_url; ?>" alt="Logo" class="h-12"></a>
+                <?php else: ?>
+                    <a href="<?php echo get_home_url(); ?>" class="text-white no-underline hover:underline">-bla+coeur
                     </a>
                 <?php endif; ?>
 

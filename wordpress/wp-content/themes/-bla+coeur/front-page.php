@@ -5,17 +5,10 @@ get_header(); ?>
 <!-- LOGO -->
 <!-- VIDEO PLAYER -->
 
-<div class="banner-video w-full h-[300px]">
 
-<?php
-    // Output the content of the homepage
-    // $homepage = get_post(23); // Replace 123 with your homepage ID
-    // if ( $homepage ) {
-    //     echo apply_filters( 'the_content', $homepage->post_content );
-    // }
-    ?>
+<div>
+    <?php get_template_part('parts/video')?>
 </div>
-
 <!-- PROJECTS (TRIPTIQUE) -->
 
 <div class="container my-12 mx-auto px-4 md:px-12">
