@@ -1,4 +1,3 @@
-version: '3.4'
 
 services:
     wordpress:
@@ -33,3 +32,13 @@ services:
             - 8080:80
         environment:
             - PMA_ARBITRARY=1
+    composer:
+        image: composer:latest
+        container_name: composer
+        volumes:
+            - ./wordpress/wp-content/themes/moinsdeblaplusdecoeur:/app
+        working_dir: /app
+        # Only run composer install when you call it manually
+        command: ["bash"]
+        stdin_open: true
+        tty: true

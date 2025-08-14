@@ -1,0 +1,414 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* overflow-x: hidden; */
+    font-family: "Open Sans", sans-serif;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.prose {
+    font-family: "Open Sans", sans-serif !important;
+}
+
+#projets {
+    overflow: hidden;
+}
+/* background-color: #65cfc7; */
+.project-1 {
+    background-color: #3eb2a8;
+}
+
+.project-2 {
+    background-color: #e40726;
+}
+.project-3 {
+    background-color: white;
+    color: black !important;
+}
+
+.project-3 p {
+    color: black;
+}
+
+.open-sans-font {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.bg-moinspluscoeur {
+    background-size: cover;
+    background-image: url("../assets/images/image00002.png");
+    width: 500px;
+    height: 500px;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.hero {
+    z-index: 1;
+    position: relative;
+}
+/* .bubble-effect {
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+} */
+/*
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+} */
+/*
+.nav-item {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    width: 40px;
+} */
+
+/* contact form */
+fieldset legend.wpforms-field-label {
+    color: white !important; /* Ensures text color is white */
+}
+.wpforms-field-sublabel.after,
+.wpforms-field-label {
+    color: white !important; /* Ensures text color is white */
+}
+
+.wpforms-container input.wpforms-field-medium,
+.wpforms-container select.wpforms-field-medium,
+.wpforms-container .wpforms-field-row.wpforms-field-medium,
+.wp-core-ui div.wpforms-container input.wpforms-field-medium,
+.wp-core-ui div.wpforms-container select.wpforms-field-medium,
+.wp-core-ui div.wpforms-container .wpforms-field-row.wpforms-field-medium {
+    max-width: none;
+}
+
+/* Modal structure */
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(
+        0,
+        0,
+        0,
+        0.8
+    ); /* Dark background with transparency */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it appears above everything else */
+}
+
+/* Style for the modal image */
+#modal img {
+    max-width: 65%; /* Set a max-width of 90% */
+    max-height: 65%; /* Set a max-height of 90% */
+    object-fit: contain; /* Keep aspect ratio of the image */
+}
+
+/* Close button style */
+#modal button {
+    position: relative;
+    top: -400px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 36px;
+    cursor: pointer;
+    z-index: 10000; /* Ensure button appears above image */
+}
+/* menu */
+
+#mobileMenu {
+    position: absolute; /* Ensure the mobile menu is positioned absolutely */
+    top: 100%; /* Place it directly below the header */
+    left: 0;
+    width: 100%;
+    padding: 16px; /* Adjust as needed */
+    z-index: 9999; /* Set a high z-index value to make sure the mobile menu appears above other elements */
+}
+
+#mobileMenu ul li:last-child {
+    border-bottom: none;
+}
+/* Container for the navbar */
+/* Container for the navbar */
+/* Container for the navbar */
+.navbar-nav {
+    /* display: flex; */
+    padding: 0; /* Remove any padding around the items */
+}
+
+/* Style for individual menu items */
+.navbar-nav li {
+    position: relative; /* For absolute positioning of hover background */
+    margin: 0; /* Remove any default margin between items */
+}
+
+/* Style for each link */
+.navbar-nav li a {
+    display: block;
+    padding: 18px 18px; /* Add more padding vertically to increase the height */
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1; /* Make sure the link is above the background */
+}
+
+/* Hover effect for each item */
+.navbar-nav li:hover a {
+    color: #65cfc7; /* Change text color on hover */
+}
+
+/* Hover effect background */
+.navbar-nav li:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Make the background fill the entire height */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+    border-radius: 5px; /* To match the rounded corners of the link */
+    z-index: -1; /* Ensure the background is behind the text */
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Optional: adding a smooth transition to the hover background */
+.navbar-nav li::before {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+/* Ensure background shows only on hover */
+.navbar-nav li:hover::before {
+    opacity: 1;
+}
+
+/*  typing */
+#typingText {
+    min-height: 2.5rem; /* Réserve l’espace pour le texte */
+    opacity: 0; /* Rend invisible avant l'animation */
+}
+
+/* Quand le texte commence à s'afficher */
+#typingText.visible {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* dev debug */
+/* Ensure sections do not overflow */
+section,
+div {
+    max-width: 100%;
+}
+
+/* Prevent body from horizontal scrolling */
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Ensure containers are properly sized */
+.container {
+    max-width: 100vw;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+[data-aos] {
+    will-change: transform, opacity;
+}
+
+/* Prevent overflow caused by animation */
+[data-aos="fade-left"] {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: opacity 1s ease-out, max-height 1s ease-out;
+}
+
+/* Show the element after animation completes */
+[data-aos="fade-left"].aos-animate {
+    opacity: 1;
+    max-height: 1000px;
+    /* Adjust this value based on the size of your content */
+}
+
+.hero {
+    position: relative;
+    z-index: 50;
+    overflow: visible !important;
+}
+
+.video-section {
+    position: relative;
+    z-index: 1;
+}
+
+a[href="#projets"] {
+    position: relative;
+    z-index: 9;
+}
+
+header {
+    position: fixed;
+    z-index: 11;
+}
+
+.hero {
+    position: relative;
+    z-index: 10; /* Below header but above video */
+}
+
+.video-section {
+    position: relative;
+    z-index: 1; /* Lowest so it doesn't cover anything */
+}
+
+#qui-sommes-nous\? {
+    overflow-x: hidden; /* Ensures no extra horizontal scrollbars */
+    position: relative; /* Prevents layout shifting */
+}
+
+.rounded-full {
+    aspect-ratio: 1 / 1; /* Forces a perfect square */
+    width: 100%; /* Ensures full width inside the container */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 50%; /* Ensures circular shape */
+}
+
+/* accordion */
+/* Red for + icon (inactive) */
+.toggle-icon {
+    color: white; /* Red when closed */
+    transition: color 0.3s ease;
+}
+
+/* White for - icon (active) */
+.toggle-btn.active .toggle-icon {
+    color: red; /* White when open */
+}
+
+/* qui sommes nous */
+.section-text {
+    max-width: 800px; /* You can adjust the width as needed */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.regular-text {
+    font-size: 1.25rem; /* Adjust font size */
+    line-height: 1.8; /* Increase line height for better readability */
+    color: #333; /* Default text color */
+    margin-bottom: 1rem; /* Add some space between paragraphs */
+}
+
+.normal-text {
+    display: block; /* Forces the non-highlighted text to be on a new line */
+}
+
+.highlighted-text-teal {
+    color: #1abc9c; /* Teal color for "Moins de 'bla'" and "... plus de" */
+    font-weight: bold; /* Make the highlighted text bold to stand out */
+    font-size: 1.5rem; /* Make the highlighted text bigger */
+}
+
+.highlighted-text-red {
+    color: #e74c3c; /* Red color for "Cœur" */
+    font-weight: bold; /* Make "Cœur" bold to stand out */
+    font-size: 1.5rem; /* Make the "Cœur" bigger */
+}
+
+/* footer */
+.social a {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* single projects */
+
+.article_content h1 {
+    margin-bottom: 1rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700
+  }
+
+  .article_content h2 {
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600
+  }
+
+  .article_content h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 500
+  }
+
+  .article_content p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem
+  }
+
+  .article_content ul {
+    margin-bottom: 1rem;
+    list-style-position: inside;
+    list-style-type: disc
+  }
+
+  .article_content ol {
+    margin-bottom: 1rem;
+    list-style-position: inside;
+    list-style-type: decimal
+  }
+
+  .article_content ul li {
+    margin-bottom: 0.25rem
+  }
