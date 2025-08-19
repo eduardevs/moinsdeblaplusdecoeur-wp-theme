@@ -38,10 +38,10 @@ if (!class_exists('Custom_Desktop_Nav_Walker')) {
 
             // Get the original URL
             $url = $item->url;
-            
+
             // Debug: Add this temporarily to see what URLs we're getting
             error_log("Desktop Menu item URL: " . $url . " | Title: " . $item->title);
-            
+
             // Always convert to section links based on title, except for true external URLs
             if (strpos($url, 'http://') === 0 || strpos($url, 'https://') === 0) {
                 // Check if it's an external URL (not our own domain)
@@ -99,10 +99,10 @@ if (!class_exists('Custom_Mobile_Nav_Walker')) {
 
             // Get the original URL
             $url = $item->url;
-            
+
             // Debug: Add this temporarily to see what URLs we're getting
             // error_log("Menu item URL: " . $url . " | Title: " . $item->title);
-            
+
             // Always convert to section links based on title, except for true external URLs
             if (strpos($url, 'http://') === 0 || strpos($url, 'https://') === 0) {
                 // Check if it's an external URL (not our own domain)

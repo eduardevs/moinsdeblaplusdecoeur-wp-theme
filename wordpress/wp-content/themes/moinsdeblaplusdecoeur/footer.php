@@ -1,5 +1,8 @@
 <?php wp_footer() ?>
 
+<!-- Bouton de don/soutien fixe -->
+<?php get_template_part('parts/donation-button'); ?>
+
 <div class="bg-stone-950 bg-black text-secondary p-20 mt-10">
 
     <div class="flex flex-col items-center justify-center">
